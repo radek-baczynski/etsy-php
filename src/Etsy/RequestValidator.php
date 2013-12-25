@@ -105,7 +105,12 @@ class RequestValidator
 							$type === 'string' && $validType === 'text')
 					{
 						$result['_valid'][$name] = $arg;
-					} else {
+					} 
+					elseif($validType == 'category' && $type=='string')
+					{
+						$result['_valid'][$name] = $arg;
+					}
+					else {
 						$result['_invalid'][] = RequestValidator::invalidParamType($name, $arg, $type, $validType);
 					}
 				} else {
