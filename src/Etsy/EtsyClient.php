@@ -21,7 +21,7 @@ class EtsyClient
 		$this->consumer_secret = $consumer_secret;
 
 		$this->oauth = new \OAuth($consumer_key, $consumer_secret, OAUTH_SIG_METHOD_HMACSHA1, OAUTH_AUTH_TYPE_URI);
-		if (defined(OAUTH_REQENGINE_CURL))
+		if (defined('OAUTH_REQENGINE_CURL'))
 		{
 			$this->oauth->setRequestEngine(OAUTH_REQENGINE_CURL);
 		} else {
