@@ -24,8 +24,6 @@ class EtsyClient
 		if (defined('OAUTH_REQENGINE_CURL'))
 		{
 			$this->oauth->setRequestEngine(OAUTH_REQENGINE_CURL);
-		} else {
-			error_log("Warning: cURL engine not present on OAuth PECL package: sudo apt-get install libcurl4-dev or sudo yum install curl-devel");
 		}
 	}
 
